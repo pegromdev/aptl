@@ -14,7 +14,7 @@ md5sums=(SKIP)
 validpgpkeys=()
 
 package() {
-	cd "${pkgname}-${pkgver}"
+	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README.md "${pkgdir}/usr/share/licenses/${pkgname}/README.md"
