@@ -1,0 +1,184 @@
+#!/bin/sh
+
+#Colors
+normal="$(tput sgr0)"
+bold="$(tput bold)"
+red="$(tput setaf 1)"
+green="$(tput setaf 2)"
+greener="$(tput setaf 10)"
+cyan="$(tput setaf 6)"
+white="$(tput setaf 7)"
+blanco="$(tput setaf 15)"
+yellow="$(tput setaf 11)"
+blue="$(tput setaf 12)"
+
+# Data Files
+
+LISTDIR="/etc/aplt/"
+PACMANLIST=""$LISTDIR"$(hostname).pacman-list.txt"
+PACMANPKGS=""$LISTDIR"$(hostname).pacman-list.pkg"
+AURLIST=""$LISTDIR"$(hostname).aur-list.txt"
+AURPKGS=""$LISTDIR"$(hostname).aur-list.pkg"
+TPACMANLIST=""$LISTDIR"aplPacmanList.txt"
+TAURLIST=""$LISTDIR"aplAurList.txt"
+TLEFTOVERLIST=""$LISTDIR"leftOverList.txt"
+LEFTOVERLIST=""$LISTDIR"$(hostname).uneeded-list.txt"
+LEFTOVERPKGS=""$LISTDIR"$(hostname).uneeded-list.pkg"
+UNEEDEDLIST=""$LISTDIR"uneeded.txt"
+
+# Creates a temporary file with lastest pacman query 
+updatePacmanList(){
+	pacman -Qqeni | awk '/Name|Description/ { print }' >> $TPACMANLIST
+}
+# Updates both's pacman-list.txt & pacman-list.pkg 
+newPacmanList(){
+	if [ -f "$PACMANLIST" ] && [ -f "$PACMANPKGS" ];then
+		rm $PACMANLIST $PACMANPKGS;
+		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
+		pacman -Qqen >> $PACMANPKGS; 
+		echo "${bold}${blue}  *${blue} pacman pkgs list updated."
+	else
+		echo "${bold}${green}  ->${white} Creating new pacman pkgs list files..."
+		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
+		pacman -Qqen >> $PACMANPKGS;
+	fi
+}
+# Checks for pacman pkgs changes.
+pacmanTest(){
+	diff $PACMANLIST $TPACMANLIST &>/dev/null
+	if [ $? -ne 0 ]; then
+		echo ${yellow}"Changes in pacman pkgs Found"
+		cp $PACMANLIST $PACMANLIST.bkp;
+		cp $PACMANPKGS $PACMANPKGS.bkp;
+		newPacmanList
+		rm $TPACMANLIST
+	else
+		echo "${bold}${cyan}  ->${cyan} pacman pkgs list has no changes."
+		rm $TPACMANLIST
+	fi
+}
+
+# Creates a temporary file with lastest AUR query 
+updateAurList(){
+	pacman -Qqemi | awk '/Name|Description/ { print }' >> $TAURLIST
+}
+# Updates both's aur-list.txt & aur-list.pkg 
+newAurList(){
+	if [ -f "$AURLIST" ] && [ -f "$AURPKGS" ];then
+		rm $AURLIST $AURPKGS;
+		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
+		pacman -Qqem >> $AURPKGS;	
+		echo "${bold}${blue}  *${blue} AUR pkgs list updated."
+	else
+		echo "${bold}${green}  ->${white} Creating new AUR pkgs list files..."
+		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
+		pacman -Qqem >> $AURPKGS;
+	fi
+}
+# Check for Aur pkgs changes
+aurTest(){
+	diff $AURLIST $TAURLIST &>/dev/null
+	if [ $? -ne 0 ]; then
+		echo ${yellow}"Changes in AUR pkgs Found" 
+		cp $AURLIST $AURLIST.bkp;
+		cp $AURPKGS $AURPKGS.bkp;
+		newAurList
+		rm $TAURLIST
+	else
+		echo "${bold}${cyan}  ->${cyan} AUR pkgs list has no changes."
+		rm $TAURLIST
+	fi
+}
+# This is the first running test it check for missing files and changes if they exist.
+checkDataFiles(){
+	# Check for Data files; if exist will create a .bkp and remove the old one.
+	if [ -f "$PACMANLIST" ] && [ -f "$PACMANPKGS" ];then
+		echo "${bold}${green}  ->${white} pacman pkgs list found"
+	else
+		echo "${bold}${red} *${red} Some pacman pkgs files are missing...${normal}"
+		echo "${bold}${greener} *${greener} Updating pkgs list${normal}"
+		newPacmanList				
+		echo "${bold}${blue}  *${blue} New pacman pkgs list created.${normal}"
+	fi
+	if [ -f "$AURLIST" ] && [ -f "$AURPKGS" ];then
+		echo "${bold}${green}  ->${white} AUR pkgs list found"
+	else
+		echo "${bold}${red} *${red} Some AUR pkgs files are missing...${normal}"
+		echo "${bold}${greener} *${greener} Updating pkgs list${normal}"
+		newAurList
+		echo "${bold}${blue}  *${blue} New AUR pkgs list created.${normal}"
+	fi
+}
+# Removes tmeporary files created to run the changes check
+cleanTmpList(){
+	rm $TPACMANLIST
+	rm $TAURLIST
+}
+# Test for uneeded pkgs.
+leftOver(){
+	pacman -Qtdi | awk '/Name|Description/ { print }' >> $TLEFTOVERLIST; 
+	pacman -Qtd | sed 's/^/  - /' >> $UNEEDEDLIST;
+	echo "${blue}::${blanco} Checking for unneeded pkgs...${normal}"
+	if [[ $(pacman -Qtd | sed 's/^/  - /') ]]; then
+		if [ -f "$LEFTOVERLIST" ] && [ -f "$LEFTOVERPKGS" ]; then
+			diff $LEFTOVERLIST $TLEFTOVERLIST &>/dev/null
+			if [ $? -ne 0 ]; then
+				echo "${yellow} New Unneeded pkgs found...${normal}"
+				newLeftoverList
+				echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+			else
+				echo "${bold}${cyan}  ->${cyan} same uneeded pkgs list.${normal}"
+				echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+			fi
+		else
+			newLeftoverList
+			echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+		fi
+	else
+		echo "${bold}${green}  ->${white} No uneeded pkgs found.${normal}"
+		if [ -f "$LEFTOVERLIST" ] && [ -f "$LEFTOVERPKGS" ]; then
+			rm $LEFTOVERLIST $LEFTOVERPKGS;
+		fi
+	fi
+	rm $TLEFTOVERLIST
+}
+# if there is a unedded pkg list already in use by the user and find new changes 
+# this will run to updating the file.
+newLeftoverList(){
+	if [ -f "$LEFTOVERLIST" ] && [ -f "$LEFTOVERPKGS" ];then
+		echo "${bold}${cyan}  ->${white} Updating unedded pkgs list"
+		rm $LEFTOVERLIST $LEFTOVERPKGS;
+		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST; 
+		pacman -Qtd >> $LEFTOVERPKGS; 
+		echo "${bold}${cyan}  ->${yellow} Uneeded pkgs list updated."
+	else
+		echo "${bold}${cyan}  ->${white} Creating new uneeded pkgs list"
+		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST;
+		pacman -Qtd >> $LEFTOVERPKGS;
+		echo "${bold}${blue}  *${blue} Uneeded pkgs list created.."
+  fi
+}
+# Main App function.
+aplt() {
+	# Check if apl directory exist; if not will run full new package list creation.
+	if [ ! -d "$LISTDIR" ]; then
+		echo "${bold}${red}  *${red} apl directory not found; creating new pkgs list.  ${bold}"
+		mkdir $LISTDIR;
+		updateAurList
+		updatePacmanList
+		newPacmanList
+		newAurList
+		cleanTmpList
+		echo "${bold}${blue}  *${blue} New pacman & AUR pkgs list created; is recomended to back these up.${normal}"
+		leftOver
+		exit 0
+	else	
+		updateAurList
+		updatePacmanList
+		checkDataFiles
+		pacmanTest
+		aurTest
+		leftOver
+	fi
+}
+aplt
