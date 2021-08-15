@@ -3,7 +3,7 @@ APTL
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://gitlab.com/pegromDev/aptl/LICENSE)
 
-#	ARCH PAKAGE TRACKING LIST
+Arch Linux packages tracking list generator.
 
 *aplt is a pacman hook bash script aiming at generating Arch Linux systems Installed pakages lists.
 Inspired by [!pug](https://aur.archlinux.org/packages/pug/) this  project is diferent in the sense that provides pkgs description files, it also check for uneeded pkgs and
