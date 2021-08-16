@@ -14,13 +14,13 @@ blue="$(tput setaf 12)"
 
 # Data Files
 
-LISTDIR="/etc/aplt/"
+LISTDIR="/etc/aptl/"
 PACMANLIST=""$LISTDIR"$(hostname).pacman-list.txt"
 PACMANPKGS=""$LISTDIR"$(hostname).pacman-list.pkg"
 AURLIST=""$LISTDIR"$(hostname).aur-list.txt"
 AURPKGS=""$LISTDIR"$(hostname).aur-list.pkg"
-TPACMANLIST=""$LISTDIR"aplPacmanList.txt"
-TAURLIST=""$LISTDIR"aplAurList.txt"
+TPACMANLIST=""$LISTDIR"aptlPacmanList.txt"
+TAURLIST=""$LISTDIR"aptlAurList.txt"
 TLEFTOVERLIST=""$LISTDIR"leftOverList.txt"
 LEFTOVERLIST=""$LISTDIR"$(hostname).uneeded-list.txt"
 LEFTOVERPKGS=""$LISTDIR"$(hostname).uneeded-list.pkg"
@@ -159,10 +159,10 @@ newLeftoverList(){
   fi
 }
 # Main App function.
-aplt() {
-	# Check if apl directory exist; if not will run full new package list creation.
+aptl() {
+	# Check if aptl directory exist; if not will run full new package list creation.
 	if [ ! -d "$LISTDIR" ]; then
-		echo "${bold}${red}  *${red} apl directory not found; creating new pkgs list.  ${bold}"
+		echo "${bold}${red}  *${red} aptl directory not found; creating new pkgs list.  ${bold}"
 		mkdir $LISTDIR;
 		updateAurList
 		updatePacmanList
@@ -181,4 +181,4 @@ aplt() {
 		leftOver
 	fi
 }
-aplt
+aptl

@@ -8,4 +8,4 @@ Target = *
 [Action]
 Depends = coreutils
 When = PostTransaction
-Exec =/usr/bin/aplt
+Exec =/usr/bin/aptl
