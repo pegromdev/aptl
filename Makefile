@@ -10,6 +10,7 @@ install:
 	@mkdir -p $(DESTDIR)$(HOOKDIR)
 	@cp src/aptl.hook $(DESTDIR)$(HOOKDIR)/aplt.hook
 	@chmod 644 $(DESTDIR)$(HOOKDIR)/aplt.hook
+	@sh $(DESTDIR)$(BINDIR)/aptl
 
 .PHONY: uninstall
 uninstall:
