@@ -1,19 +1,19 @@
 BINDIR = /usr/bin
-CFGDIR  = /etc/aplt
+CFGDIR  = /etc/aptl
 HOOKDIR = /etc/pacman.d/hooks
 
 .PHONY: install
 install:
 	@mkdir -p $(DESTDIR)$(BINDIR)
-	@cp src/aptl $(DESTDIR)$(BINDIR)/aplt
-	@chmod 755 $(DESTDIR)$(BINDIR)/aplt
+	@cp src/aptl $(DESTDIR)$(BINDIR)/aptl
+	@chmod 755 $(DESTDIR)$(BINDIR)/aptl
 	@mkdir -p $(DESTDIR)$(HOOKDIR)
-	@cp src/aptl.hook $(DESTDIR)$(HOOKDIR)/aplt.hook
-	@chmod 644 $(DESTDIR)$(HOOKDIR)/aplt.hook
+	@cp src/aptl.hook $(DESTDIR)$(HOOKDIR)/aptl.hook
+	@chmod 644 $(DESTDIR)$(HOOKDIR)/aptl.hook
 
 
 .PHONY: uninstall
 uninstall:
-	@rm -rf $(DESTDIR)$(BINDIR)/aplt
+	@rm -rf $(DESTDIR)$(BINDIR)/aptl
 	@rm -rf $(DESTDIR)$(CFGDIR)
-	@rm -rf $(DESTDIR)$(HOOKDIR)/aplt.hook
+	@rm -rf $(DESTDIR)$(HOOKDIR)/aptl.hook
