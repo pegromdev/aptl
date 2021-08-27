@@ -39,6 +39,10 @@ Examples:
 Suggestion, improvements and more are Welcome!.
 
 
+![aptl](https://github.com/pegromdev/aptl/blob/master/examples/aptl.png "aptl-hook")
+
+
+
 ## Requirements
 
 * *pacman* - A library-based package manager with dependency support
@@ -59,8 +63,6 @@ $ sudo make install
 # Or Uninstall
 $ sudo make uninstall
 ```
-
-![aptl](https://github.com/pegromdev/aptl/blob/master/examples/aptl.png "aptl-hook")
 
 
 Special Thanks to:
