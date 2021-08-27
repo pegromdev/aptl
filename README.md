@@ -42,11 +42,6 @@ Suggestion, improvements and more are Welcome!.
 ![aptl](https://github.com/pegromdev/aptl/blob/master/examples/aptl.png "aptl-hook")
 
 
-
-## Requirements
-
-* *pacman* - A library-based package manager with dependency support
-
 # Installation
 
 ### Package (AUR)
