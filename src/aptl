@@ -1,4 +1,6 @@
 #!/bin/sh
+# Password request to manipulate files inside the  root tree 
+[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 
 #Colors
 normal="$(tput sgr0)"
@@ -28,7 +30,8 @@ UNEEDEDLIST=""$LISTDIR"uneeded.txt"
 
 # Creates a temporary file with lastest pacman query 
 updatePacmanList(){
-	pacman -Qqeni | awk '/Name|Description/ { print }' >> $TPACMANLIST
+	LANG=C pacman -Qqeni | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $TPACMANLIST
+#	pacman -Qqeni | awk '/Name|Description/ { print }' >> $TPACMANLIST
 }
 # Updates both's pacman-list.txt & pacman-list.pkg 
 newPacmanList(){
@@ -60,7 +63,8 @@ pacmanTest(){
 
 # Creates a temporary file with lastest AUR query 
 updateAurList(){
-	pacman -Qqemi | awk '/Name|Description/ { print }' >> $TAURLIST
+	LANG=C pacman -Qqemi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $TAURLIST
+#	pacman -Qqemi | awk '/Name|Description/ { print }' >> $TAURLIST
 }
 # Updates both's aur-list.txt & aur-list.pkg 
 newAurList(){
@@ -116,7 +120,8 @@ cleanTmpList(){
 }
 # Test for uneeded pkgs.
 leftOver(){
-	pacman -Qtdi | awk '/Name|Description/ { print }' >> $TLEFTOVERLIST; 
+	LANG=C pacman -Qtdi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}'	>> $TLEDTOVERLIST;
+#	pacman -Qtdi | awk '/Name|Description/ { print }' >> $TLEFTOVERLIST; 
 	pacman -Qtd | sed 's/^/  - /' >> $UNEEDEDLIST;
 	echo "${blue}::${blanco} Checking for unneeded pkgs...${normal}"
 	if [[ $(pacman -Qtd | sed 's/^/  - /') ]]; then
@@ -148,18 +153,21 @@ newLeftoverList(){
 	if [ -f "$LEFTOVERLIST" ] && [ -f "$LEFTOVERPKGS" ];then
 		echo "${bold}${cyan}  ->${white} Updating unedded pkgs list"
 		rm $LEFTOVERLIST $LEFTOVERPKGS;
-		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST; 
+		LANG=C pacman -Qtdi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $LEFTOVERLIST;
+#		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST; 
 		pacman -Qtd >> $LEFTOVERPKGS; 
 		echo "${bold}${cyan}  ->${yellow} Uneeded pkgs list updated."
 	else
 		echo "${bold}${cyan}  ->${white} Creating new uneeded pkgs list"
-		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST;
+		LANG=C pacman -Qqemi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $LEFTOVERLIST;
+#		pacman -Qtdi | awk '/Name|Description/ { print }' >> $LEFTOVERLIST;
 		pacman -Qtd >> $LEFTOVERPKGS;
 		echo "${bold}${blue}  *${blue} Uneeded pkgs list created.."
   fi
 }
 # Main App function.
 aptl() {
+
 	# Check if aptl directory exist; if not will run full new package list creation.
 	if [ ! -d "$LISTDIR" ]; then
 		echo "${bold}${red}  *${red} aptl directory not found; creating new pkgs list.  ${bold}"
@@ -169,7 +177,7 @@ aptl() {
 		newPacmanList
 		newAurList
 		cleanTmpList
-		echo "${bold}${blue}  *${blue} New pacman & AUR pkgs list created; is recomended to back these up.${normal}"
+		echo "${bold}${blue}  *${blue} New pacman & AUR pkgs list created; Run aptl -b /path/to/backupLocation to Hardlink them.${normal}"
 		leftOver
 		exit 0
 	else	

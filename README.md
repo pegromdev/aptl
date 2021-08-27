@@ -60,4 +60,7 @@ $ sudo make install
 $ sudo make uninstall
 ```
 
-Special Thanks to [Wayne Wesley](https://github.com/The-Repo-Club/) for contributing in the making of this AUR PKGBUILD
+Special Thanks to:
+
+[Wayne Wesley](https://github.com/The-Repo-Club/) 
+[papajoker](https://github.com/papajoker/)
