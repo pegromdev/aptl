@@ -14,26 +14,26 @@ One more neat addition is the notification of orphans pakages if they are availa
 
 Examples:
 
-*	hostname.pacman-list.txt	[link]	
-    For reviewing official Arch pakages on your system since pakages Descitptions are available.
+*	hostname.pacman-list.txt	[link]
+	- For reviewing official Arch pakages on your system since pakages Descitptions are available.
 
-*	hostname.pacman-list.pkg	[link]	
-    To easy restore official Arch pakages with `pacman -S - < xps.pacman-list.pkg`.
+*	hostname.pacman-list.pkg	[link]
+	- To easy restore official Arch pakages with `pacman -S - < xps.pacman-list.pkg`.
 
-*	hostname.aur-list.txt		[link]	
-	  For reviewing AUR pakages on your system since pakages Descitptions are available.
+*	hostname.aur-list.txt		[link]
+	- For reviewing AUR pakages on your system since pakages Descitptions are available.
 
-*	hostname.aur-list.pkg		[link]	
-    To easy restore AUR pakages with `paru -S - < xps.aur-list.pkg`.
+*	hostname.aur-list.pkg		[link]
+	- To easy restore AUR pakages with `paru -S - < xps.aur-list.pkg`.
 
-*	hostname.uneeded.pkg		[link]	
-    Orphans are store here until delition or whitelisting.
+*	hostname.uneeded.pkg		[link]
+	- Orphans are store here until delition or whitelisting.
 
 *	hostname.whitelist.txt		[link]	( *not yet implemented!* )
-    If for some reason you need an orphan to stay in your system here it will be.	
+	- If for some reason you need an orphan to stay in your system here it will be.	
 
 *	hostname.removed.txt		[link]	( *not yet implemented!* )
-    For way to time travel in case you ever need to remember an erased one 		
+	- For way to time travel in case you ever need to remember an erased one 		
 
 
 Suggestion, improvements and more are Welcome!.
