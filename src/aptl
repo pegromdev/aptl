@@ -37,12 +37,14 @@ updatePacmanList(){
 newPacmanList(){
 	if [ -f "$PACMANLIST" ] && [ -f "$PACMANPKGS" ];then
 		rm $PACMANLIST $PACMANPKGS;
-		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
+		LANG=C pacman -Qqeni | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $PACMANLIST;
+#		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
 		pacman -Qqen >> $PACMANPKGS; 
 		echo "${bold}${blue}  *${blue} pacman pkgs list updated."
 	else
 		echo "${bold}${green}  ->${white} Creating new pacman pkgs list files..."
-		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
+		LANG=C pacman -Qqeni | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $PACMANLIST;
+#		pacman -Qqeni | awk '/Name|Description/ { print }' >> $PACMANLIST; 
 		pacman -Qqen >> $PACMANPKGS;
 	fi
 }
@@ -70,12 +72,14 @@ updateAurList(){
 newAurList(){
 	if [ -f "$AURLIST" ] && [ -f "$AURPKGS" ];then
 		rm $AURLIST $AURPKGS;
-		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
+		LANG=C pacman -Qqemi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $AURLIST;
+#		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
 		pacman -Qqem >> $AURPKGS;	
 		echo "${bold}${blue}  *${blue} AUR pkgs list updated."
 	else
 		echo "${bold}${green}  ->${white} Creating new AUR pkgs list files..."
-		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
+		LANG=C pacman -Qqeni | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}' >> $AURLIST;
+#		pacman -Qqemi | awk '/Name|Description/ { print }' >> $AURLIST;
 		pacman -Qqem >> $AURPKGS;
 	fi
 }
@@ -120,7 +124,7 @@ cleanTmpList(){
 }
 # Test for uneeded pkgs.
 leftOver(){
-	LANG=C pacman -Qtdi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}'	>> $TLEDTOVERLIST;
+	LANG=C pacman -Qtdi | awk -F': ' '/^Name/ {name=$2} /^Desc/ {desc=$2} /^URL/ {printf "%-28s %s\t%s\n",name":",desc,$2}'	>> $TLEFTOVERLIST;
 #	pacman -Qtdi | awk '/Name|Description/ { print }' >> $TLEFTOVERLIST; 
 	pacman -Qtd | sed 's/^/  - /' >> $UNEEDEDLIST;
 	echo "${blue}::${blanco} Checking for unneeded pkgs...${normal}"
@@ -130,14 +134,14 @@ leftOver(){
 			if [ $? -ne 0 ]; then
 				echo "${yellow} New Unneeded pkgs found...${normal}"
 				newLeftoverList
-				echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 			else
 				echo "${bold}${cyan}  ->${cyan} same uneeded pkgs list.${normal}"
-				echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 			fi
 		else
 			newLeftoverList
-			echo "${green}  --${white} Run apl -c to clean or apl -s to see the full list${normal}"
+			echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 		fi
 	else
 		echo "${bold}${green}  ->${white} No uneeded pkgs found.${normal}"
