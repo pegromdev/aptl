@@ -1,0 +1,538 @@
+Name            : accountsservice
+Description     : D-Bus interface for user account query and manipulation
+Name            : acpi
+Description     : Client for battery, power, and thermal readings
+Name            : adobe-source-han-sans-cn-fonts
+Description     : Adobe Source Han Sans Subset OTF - Simplified Chinese OpenType/CFF fonts
+Name            : adobe-source-han-sans-jp-fonts
+Description     : Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts
+Name            : adobe-source-han-sans-kr-fonts
+Description     : Adobe Source Han Sans Subset OTF - Korean OpenType/CFF fonts
+Name            : alsa-firmware
+Description     : Firmware binaries for loader programs in alsa-tools and hotplug firmware loader
+Name            : alsa-plugins
+Description     : Additional ALSA plugins
+Name            : alsa-utils
+Description     : Advanced Linux Sound Architecture - Utilities
+Name            : arandr
+Description     : Provide a simple visual front end for XRandR 1.2.
+Name            : arc-gtk-theme-eos
+Description     : A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell
+Name            : arc-x-icons-theme
+Description     : Modern free desktop icon theme whose design is based around the use of bold colours and simple geometric shapes to compose icons with pixel perfect rendering.
+Name            : archlinux-xdg-menu
+Description     : automatic generate WM menu from xdg files
+Name            : autoconf
+Description     : A GNU tool for automatically configuring source code
+Name            : automake
+Description     : A GNU tool for automatically creating Makefiles
+Name            : b43-fwcutter
+Description     : firmware extractor for the b43 kernel module
+Name            : base
+Description     : Minimal package set to define a basic Arch Linux installation
+Name            : bash-completion
+Description     : Programmable completion for the bash shell
+Name            : bat
+Description     : Cat clone with syntax highlighting and git integration
+Name            : bind
+Description     : A complete, highly portable implementation of the DNS protocol
+Name            : binutils
+Description     : A set of programs to assemble and manipulate binary and object files
+Name            : bison
+Description     : The GNU general-purpose parser generator
+Name            : blueberry
+Description     : Bluetooth configuration tool
+Name            : bluez
+Description     : Daemons for the bluetooth protocol stack
+Name            : bluez-utils
+Description     : Development and debugging utilities for the bluetooth protocol stack
+Name            : btrfs-progs
+Description     : Btrfs filesystem utilities
+Name            : capitaine-cursors
+Description     : An x-cursor theme inspired by macOS and based on KDE Breeze
+Name            : celluloid
+Description     : Simple GTK+ frontend for mpv
+Name            : chaotic-keyring
+Description     : Chaotic-AUR PGP keyring
+Name            : chaotic-mirrorlist
+Description     : Chaotic-AUR mirror list for use by pacman
+Name            : chromium
+Description     : A web browser built for speed, simplicity, and security
+Name            : conky
+Description     : Lightweight system monitor for X
+Name            : dex
+Description     : Program to generate and execute DesktopEntry files of type Application
+Name            : dhclient
+Description     : A standalone DHCP client from the dhcp package
+Name            : dialog
+Description     : A tool to display dialog boxes from shell scripts
+Name            : diffutils
+Description     : Utility programs used for creating patch files
+Name            : dmenu
+Description     : Generic menu for X
+Name            : dnsmasq
+Description     : Lightweight, easy to configure DNS forwarder and DHCP server
+Name            : dunst
+Description     : Customizable and lightweight notification-daemon
+Name            : efibootmgr
+Description     : Linux user-space application to modify the EFI Boot Manager
+Name            : endeavouros-keyring
+Description     : EndeavourOS keyring
+Name            : endeavouros-mirrorlist
+Description     : EndeavourOS mirrorlist
+Name            : endeavouros-theming
+Description     : Default EndeavourOS background images and icons for all different DE
+Name            : endeavouros-xfce4-terminal-colors
+Description     : EndeavourOS colorscheme for xfce4-terminal
+Name            : entr
+Description     : Run arbitrary commands when files change
+Name            : eos-hooks
+Description     : EndeavourOS pacman hooks
+Name            : eos-log-tool
+Description     : Gathers selected system logs and sends them to the internet.
+Name            : eos-update-notifier
+Description     : Software update notifier and 'news for you' for EndeavourOS users.
+Name            : ethtool
+Description     : Utility for controlling network drivers and hardware
+Name            : expect
+Description     : A tool for automating interactive applications
+Name            : f2fs-tools
+Description     : Tools for Flash-Friendly File System (F2FS)
+Name            : fakeroot
+Description     : Tool for simulating superuser privileges
+Name            : fd
+Description     : Simple, fast and user-friendly alternative to find
+Name            : feh
+Description     : Fast and light imlib2-based image viewer
+Name            : ffmpegthumbnailer
+Description     : Lightweight video thumbnailer that can be used by file managers.
+Name            : file-roller
+Description     : Create and modify archives
+Name            : firefox
+Description     : Standalone web browser from mozilla.org
+Name            : firewalld
+Description     : Firewall daemon with D-Bus interface
+Name            : flex
+Description     : A tool for generating text-scanning programs
+Name            : fzf
+Description     : Command-line fuzzy finder
+Name            : galculator
+Description     : GTK+ based scientific calculator
+Name            : gcc
+Description     : The GNU Compiler Collection - C and C++ frontends
+Name            : github-cli
+Description     : The GitHub CLI
+Name            : glances
+Description     : CLI curses-based monitoring tool
+Name            : glow
+Description     : Markdown renderer for the CLI
+Name            : gnome-disk-utility
+Description     : Disk Management Utility for GNOME
+Name            : gnome-keyring
+Description     : Stores passwords and encryption keys
+Name            : gnu-netcat
+Description     : GNU rewrite of netcat, the network piping application
+Name            : grub
+Description     : GNU GRand Unified Bootloader (2)
+Name            : grub-btrfs
+Description     : Include btrfs snapshots in GRUB boot options
+Name            : grub-tools
+Description     : Fixes, additions and enhancements to grub and os-prober.
+Name            : grub2-theme-endeavouros
+Description     : EndeavourOS grub2 theme
+Name            : gst-libav
+Description     : Multimedia graph framework - libav plugin
+Name            : gst-plugin-pipewire
+Description     : Multimedia graph framework - pipewire plugin
+Name            : gst-plugins-bad
+Description     : Multimedia graph framework - bad plugins
+Name            : gst-plugins-ugly
+Description     : Multimedia graph framework - ugly plugins
+Name            : gtk-engine-murrine
+Description     : GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
+Name            : gvfs
+Description     : Virtual filesystem implementation for GIO
+Name            : gvfs-afc
+Description     : Virtual filesystem implementation for GIO (AFC backend; Apple mobile devices)
+Name            : gvfs-goa
+Description     : Virtual filesystem implementation for GIO (Gnome Online Accounts backend; cloud storage)
+Name            : gvfs-google
+Description     : Virtual filesystem implementation for GIO (Google Drive backend)
+Name            : gvfs-gphoto2
+Description     : Virtual filesystem implementation for GIO (gphoto2 backend; PTP camera, MTP media player)
+Name            : gvfs-mtp
+Description     : Virtual filesystem implementation for GIO (MTP backend; Android, media player)
+Name            : gvfs-nfs
+Description     : Virtual filesystem implementation for GIO (NFS backend)
+Name            : gvfs-smb
+Description     : Virtual filesystem implementation for GIO (SMB/CIFS backend; Windows client)
+Name            : htop
+Description     : Interactive process viewer
+Name            : hwinfo
+Description     : Hardware detection tool from openSUSE
+Name            : i3-gaps
+Description     : A fork of i3wm tiling window manager with more features, including gaps
+Name            : i3blocks
+Description     : Define blocks for your i3bar status line
+Name            : i3lock
+Description     : Improved screenlocker based upon XCB and PAM
+Name            : i3status
+Description     : Generates status bar to use with i3bar, dzen2 or xmobar
+Name            : i3status-rust
+Description     : Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
+Name            : imagewriter
+Description     : A graphical utility for writing raw disk images & hybrid isos to USB keys
+Name            : inetutils
+Description     : A collection of common network programs
+Name            : intel-ucode
+Description     : Microcode update files for Intel CPUs
+Name            : inxi
+Description     : Full featured CLI system information tool
+Name            : iptables-nft
+Description     : Linux kernel packet control tool (using nft interface)
+Name            : ipw2100-fw
+Description     : Intel Centrino Drivers firmware for IPW2100
+Name            : ipw2200-fw
+Description     : Firmware for the Intel PRO/Wireless 2200BG
+Name            : iwd
+Description     : Internet Wireless Daemon
+Name            : jfsutils
+Description     : JFS filesystem utilities
+Name            : jq
+Description     : Command-line JSON processor
+Name            : keyserver-rank
+Description     : Ranks some keyservers.
+Name            : kitty
+Description     : A modern, hackable, featureful, OpenGL-based terminal emulator
+Name            : kodi
+Description     : A software media player and entertainment hub for digital media
+Name            : libdvdcss
+Description     : Portable abstraction library for DVD decryption
+Name            : libgsf
+Description     : An extensible I/O abstraction library for dealing with structured file formats
+Name            : libopenraw
+Description     : Library for decoding RAW files
+Name            : libtool
+Description     : A generic library support script
+Name            : libvirt
+Description     : API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
+Name            : libwnck3
+Description     : Library to manage X windows and workspaces (via pagers, tasklists, etc.)
+Name            : linux
+Description     : The Linux kernel and modules
+Name            : linux-atm
+Description     : Drivers and tools to support ATM networking under Linux.
+Name            : linux-firmware
+Description     : Firmware files for Linux
+Name            : linux-headers
+Description     : Headers and scripts for building modules for the Linux kernel
+Name            : logrotate
+Description     : Rotates system logs automatically
+Name            : lsd
+Description     : Modern ls with a lot of pretty colors and awesome icons
+Name            : lvm2
+Description     : Logical Volume Manager 2 utilities
+Name            : lxappearance-gtk3
+Description     : Feature-rich GTK+ theme switcher of the LXDE Desktop (GTK+ 3 version)
+Name            : lynx
+Description     : A text browser for the World Wide Web
+Name            : m4
+Description     : The GNU macro processor
+Name            : maim
+Description     : Utility to take a screenshot using imlib2
+Name            : make
+Description     : GNU make utility to maintain groups of programs
+Name            : man-db
+Description     : A utility for reading man pages
+Name            : man-pages
+Description     : Linux man pages
+Name            : mdadm
+Description     : A tool for managing/monitoring Linux md device arrays, also known as Software RAID
+Name            : meld
+Description     : Compare files, directories and working copies
+Name            : mkinitcpio
+Description     : Modular initramfs image creation utility
+Name            : mkinitcpio-busybox
+Description     : Base initramfs tools
+Name            : mkinitcpio-nfs-utils
+Description     : ipconfig and nfsmount tools for NFS root support in mkinitcpio
+Name            : mkinitcpio-openswap
+Description     : mkinitcpio hook to open swap at boot time
+Name            : mlocate
+Description     : Merging locate/updatedb implementation
+Name            : modemmanager
+Description     : Mobile broadband modem management service
+Name            : mpc
+Description     : Minimalist command line interface to MPD
+Name            : mpd
+Description     : Flexible, powerful, server-side application for playing music
+Name            : mtools
+Description     : A collection of utilities to access MS-DOS disks
+Name            : nano
+Description     : Pico editor clone with enhancements
+Name            : ncdu
+Description     : Disk usage analyzer with an ncurses interface
+Name            : ncmpcpp
+Description     : Almost exact clone of ncmpc with some new features
+Name            : ndisc6
+Description     : Collection of IPv6 networking utilities
+Name            : neofetch
+Description     : A CLI system information tool written in BASH that supports displaying images.
+Name            : neovim
+Description     : Fork of Vim aiming to improve user experience, plugins, and GUIs
+Name            : net-tools
+Description     : Configuration tools for Linux networking
+Name            : netctl
+Description     : Profile based systemd network management
+Name            : network-manager-applet
+Description     : Applet for managing network connections
+Name            : networkmanager
+Description     : Network connection manager and user applications
+Name            : networkmanager-openvpn
+Description     : NetworkManager VPN plugin for OpenVPN
+Name            : newsboat
+Description     : An RSS/Atom feed reader for text terminals
+Name            : nitrogen
+Description     : Background browser and setter for X windows
+Name            : nmap
+Description     : Utility for network discovery and security auditing
+Name            : nodejs
+Description     : Evented I/O for V8 javascript
+Name            : noto-fonts
+Description     : Google Noto TTF fonts
+Name            : npm
+Description     : A package manager for javascript
+Name            : nss-mdns
+Description     : glibc plugin providing host name resolution via mDNS
+Name            : ntfs-3g
+Description     : NTFS filesystem driver and utilities
+Name            : numlockx
+Description     : Turns on the numlock key in X11.
+Name            : openconnect
+Description     : Open client for Cisco AnyConnect VPN
+Name            : opendesktop-fonts
+Description     : Chinese TrueType Fonts
+Name            : os-prober
+Description     : Utility to detect other OSes on a set of drives
+Name            : otf-font-awesome
+Description     : Iconic font designed for Bootstrap
+Name            : pacman-contrib
+Description     : Contributed scripts and tools for pacman systems
+Name            : pacui
+Description     : Bash script providing advanced Pacman and Yay/Pikaur/Aurman/Pakku/Trizen/Pacaur functionality in a simple UI
+Name            : pamac-aur
+Description     : A Gtk3 frontend, Package Manager based on libalpm with AUR and Appstream support
+Name            : pandoc
+Description     : Conversion between markup formats
+Name            : paprefs
+Description     : Configuration dialog for PulseAudio
+Name            : paru
+Description     : Feature packed AUR helper
+Name            : pass
+Description     : Stores, retrieves, generates, and synchronizes passwords securely
+Name            : patch
+Description     : A utility to apply patch files to original sources
+Name            : pavucontrol
+Description     : PulseAudio Volume Control
+Name            : perl
+Description     : A highly capable, feature-rich programming language
+Name            : pipe-viewer-git
+Description     : A lightweight YouTube client for Linux (CLI/GTK) (fork of straw-viewer)
+Name            : pkgconf
+Description     : Package compiler and linker metadata toolkit
+Name            : playerctl
+Description     : mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+Name            : polkit-gnome
+Description     : Legacy polkit authentication agent for GNOME
+Name            : poppler-glib
+Description     : Poppler glib bindings
+Name            : pptpclient
+Description     : Client for the proprietary Microsoft Point-to-Point Tunneling Protocol, PPTP.
+Name            : prettyping
+Description     : A ping wrapper making the output prettier, more colorful, more compact, and easier to read.
+Name            : procs
+Description     : A modern replacement for ps written in Rust
+Name            : pulseaudio
+Description     : A featureful, general-purpose sound server
+Name            : pulseaudio-bluetooth
+Description     : Bluetooth support for PulseAudio
+Name            : pulsemixer
+Description     : CLI and curses mixer for pulseaudio
+Name            : python-pip
+Description     : The PyPA recommended tool for installing Python packages
+Name            : qemu
+Description     : A generic and open source machine emulator and virtualizer
+Name            : qemu-arch-extra
+Description     : QEMU for foreign architectures
+Name            : qtpass
+Description     : A multi-platform GUI for pass
+Name            : r8168
+Description     : A kernel module for Realtek 8168 network cards
+Name            : ranger
+Description     : Simple, vim-like file manager
+Name            : rclone
+Description     : Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage
+Name            : rclone-browser
+Description     : Simple cross-platform GUI for rclone
+Name            : reflector
+Description     : A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+Name            : reflector-simple
+Description     : Simple GUI wrapper for 'reflector'.
+Name            : reiserfsprogs
+Description     : Reiserfs utilities
+Name            : restic
+Description     : Fast, secure, efficient backup program
+Name            : rofi
+Description     : A window switcher, application launcher and dmenu replacement
+Name            : rp-pppoe
+Description     : Roaring Penguin's Point-to-Point Protocol over Ethernet client
+Name            : rsync
+Description     : A fast and versatile file copying tool for remote and local files
+Name            : rxvt-unicode
+Description     : Unicode enabled rxvt-clone terminal emulator (urxvt)
+Name            : s-nail
+Description     : Environment for sending and receiving mail
+Name            : s-tui
+Description     : Terminal UI stress test and monitoring tool
+Name            : smartmontools
+Description     : Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+Name            : sof-firmware
+Description     : Sound Open Firmware
+Name            : solid
+Description     : Hardware integration and detection
+Name            : spotify
+Description     : A proprietary music streaming service
+Name            : stow
+Description     : Manage installation of multiple softwares in the same directory tree
+Name            : sudo
+Description     : Give certain users the ability to run some commands as root
+Name            : sxiv
+Description     : Simple X Image Viewer
+Name            : sysfsutils
+Description     : System Utilities Based on Sysfs
+Name            : sysstat
+Description     : a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
+Name            : task
+Description     : A command-line todo list manager
+Name            : texinfo
+Description     : GNU documentation system for on-line information and printed output
+Name            : thefuck
+Description     : Magnificent app which corrects your previous console command
+Name            : thunar
+Description     : Modern file manager for Xfce
+Name            : thunar-archive-plugin
+Description     : Create and extract archives in Thunar
+Name            : thunar-volman
+Description     : Automatic management of removeable devices in Thunar
+Name            : tig
+Description     : Text-mode interface for Git.
+Name            : timeshift-autosnap
+Description     : Timeshift auto-snapshot script which runs before package upgrade using Pacman hook.
+Name            : tldr
+Description     : Command line client for tldr, a collection of simplified and community-driven man pages.
+Name            : tlp
+Description     : Linux Advanced Power Management
+Name            : tmux
+Description     : A terminal multiplexer
+Name            : translate-shell
+Description     : A command-line interface and interactive shell for Google Translate
+Name            : transmission-gtk
+Description     : Fast, easy, and free BitTorrent client (GTK+ GUI)
+Name            : trash-cli
+Description     : Command line trashcan (recycle bin) interface
+Name            : ttf-bitstream-vera
+Description     : Bitstream Vera fonts.
+Name            : ttf-dejavu
+Description     : Font family based on the Bitstream Vera Fonts with a wider range of characters
+Name            : ttf-inconsolata
+Description     : Monospace font for pretty code listings and for the terminal
+Name            : ttf-liberation
+Description     : Font family which aims at metric compatibility with Arial, Times New Roman, and Courier New
+Name            : ttf-linux-libertine
+Description     : Serif (Libertine) and Sans Serif (Biolinum) OpenType fonts with large Unicode coverage
+Name            : ttf-opensans
+Description     : Sans-serif typeface commissioned by Google
+Name            : tumbler
+Description     : D-Bus service for applications to request thumbnails
+Name            : unrar
+Description     : The RAR uncompression program
+Name            : upower
+Description     : Abstraction for enumerating power devices, listening to device events and querying history and statistics
+Name            : usb_modeswitch
+Description     : Activating switchable USB devices on Linux.
+Name            : usbutils
+Description     : A collection of USB tools to query connected USB devices
+Name            : vi
+Description     : The original ex/vi text editor
+Name            : virt-manager
+Description     : Desktop user interface for managing virtual machines
+Name            : vulkan-intel
+Description     : Intel's Vulkan mesa driver
+Name            : w3m
+Description     : Text-based Web browser as well as pager
+Name            : welcome
+Description     : Welcome greeter for new EndeavourOS users.
+Name            : wget
+Description     : Network utility to retrieve files from the Web
+Name            : which
+Description     : A utility to show the full path of commands
+Name            : whois
+Description     : Intelligent WHOIS client
+Name            : wireless-regdb
+Description     : Central Regulatory Domain Database
+Name            : wireless_tools
+Description     : Tools allowing to manipulate the Wireless Extensions
+Name            : wvdial
+Description     : A dialer program to connect to the Internet
+Name            : xbindkeys
+Description     : Launch shell commands with your keyboard or your mouse under X
+Name            : xcape
+Description     : Configure modifier keys to act as other keys when pressed and released on their own
+Name            : xclip
+Description     : Command line interface to the X11 clipboard
+Name            : xdg-user-dirs
+Description     : Manage user directories like ~/Desktop and ~/Music
+Name            : xdg-user-dirs-gtk
+Description     : Creates user dirs and asks to relocalize them
+Name            : xdg-utils
+Description     : Command line tools that assist applications with a variety of desktop integration tasks
+Name            : xdotool
+Description     : Command-line X11 automation tool
+Name            : xed
+Description     : A small and lightweight text editor. X-Apps Project.
+Name            : xf86-video-nouveau
+Description     : Open Source 3D acceleration driver for nVidia cards
+Name            : xf86-video-vesa
+Description     : X.org vesa video driver
+Name            : xfce4-terminal
+Description     : A modern terminal emulator primarily for the Xfce desktop environment
+Name            : xfsprogs
+Description     : XFS filesystem utilities
+Name            : xl2tpd
+Description     : an open source implementation of the L2TP maintained by Xelerance Corporation
+Name            : xorg-server
+Description     : Xorg X server
+Name            : xorg-xdpyinfo
+Description     : Display information utility for X
+Name            : xorg-xinit
+Description     : X.Org initialisation program
+Name            : xorg-xinput
+Description     : Small commandline tool to configure devices
+Name            : xorg-xkill
+Description     : Kill a client by its X resource
+Name            : xorg-xrandr
+Description     : Primitive command line interface to RandR extension
+Name            : xsel
+Description     : XSel is a command-line program for getting and setting the contents of the X selection
+Name            : xterm
+Description     : X Terminal Emulator
+Name            : yad-eos
+Description     : A fork of zenity - display graphical dialogs from shell scripts or command line
+Name            : youtube-dl
+Description     : A command-line program to download videos from YouTube.com and a few more sites
+Name            : zathura
+Description     : Minimalistic document viewer
+Name            : zathura-pdf-mupdf
+Description     : PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
+Name            : zsh
+Description     : A very advanced and programmable command interpreter (shell) for UNIX

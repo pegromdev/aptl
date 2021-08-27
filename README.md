@@ -14,7 +14,7 @@ One more neat addition is the notification of orphans pakages if they are availa
 
 Examples:
 
-*	hostname.pacman-list.txt	[link]
+*	[hostname.pacman-list.txt]	(/examples/xps.pacman-list.txt)
 	- For reviewing official Arch pakages on your system since pakages Descitptions are available.
 
 *	hostname.pacman-list.pkg	[link]
