@@ -9,11 +9,13 @@ Arch Linux packages tracking list generator.
 
 
 This [pacman](https://wiki.archlinux.org/title/Pacman) hook generates a few lists of your system Installed pakages
-but also keep track of the ones you remove plus keeps an eye in your system orphans pakages to.Aptl provides an automatic way to keep these files safe for easy pakages restoring proposes.
+but also keep track of the ones you remove (not yet implemented ) plus keeps an eye in your system orphans pakages to.
+Aptl provides an automatic way to keep these files safe for easy pakages restoring proposes.
 
 It will generates a few lists, some provide detailed names of packages and also packages descritopns for better reading of whats on your system,including urls for farther informaion about your installed software, others are strictly for restoring propuses; It will also store a list of every pakage you ever remove in case you one day need to remember that software you once tried and forgot about it.
 
-One more neat addition is the notification of orphans pakages if they are available to be remove with options to clean them or add them to a white list if u ever need to.
+One more neat addition is the notification of orphans pakages if they are available to be remove with options to clean them or add them to a white list if u ever need to. 
+( Not yet implemented! )
 
 Inspired by [pug](https://aur.archlinux.org/packages/pug/) this hook lets you decide where to keep your lists and to back them up as you please. 
 Suggestion, improvements and more are Welcome!.
