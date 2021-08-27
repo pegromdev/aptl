@@ -134,14 +134,14 @@ leftOver(){
 			if [ $? -ne 0 ]; then
 				echo "${yellow} New Unneeded pkgs found...${normal}"
 				newLeftoverList
-				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
+#				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 			else
 				echo "${bold}${cyan}  ->${cyan} same uneeded pkgs list.${normal}"
-				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
+#				echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 			fi
 		else
 			newLeftoverList
-			echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
+#			echo "${green}  --${white} Run aptl -c to clean or aptl -s to see the full list${normal}"
 		fi
 	else
 		echo "${bold}${green}  ->${white} No uneeded pkgs found.${normal}"
