@@ -1,28 +1,13 @@
-Name            : aptl
-Description     : Creates installed lists of pkgs with Names & Descriptions for backup proposes.
-Name            : buku-git
-Description     : Powerful command-line bookmark manager.
-Name            : i3lock-fancy-git
-Description     : i3lock-color script: blurs background, adds lock icon and text, offers dark/light background detection.
-Name            : kodi-addon-inputstream-adaptive-git
-Description     : InputStream client for adaptive streams for Kodi 18+
-Name            : kodi-addon-pvr-iptvsimple
-Description     : IPTV Simple PVR client addon for Kodi
-Name            : mutt-wizard-git
-Description     : Easily auto-configure neomutt and isync/mpop with safe passwords (IMAP/POP3/SMTP)
-Name            : nerd-fonts-source-code-pro
-Description     : Patched font SourceCodePro from nerd-fonts library
-Name            : picom-tryone-git
-Description     : tryone144's picom fork with dual_kawase blur, an X compositor (fork of compton)
-Name            : readability-cli
-Description     : Firefox Reader Mode in your terminal! - CLI tool for Mozilla's Readability library
-Name            : rtl8814au-dkms-git
-Description     : RTL8814AU and RTL8813AU chipset driver with firmware v5.8.5.1
-Name            : simple-mtpfs
-Description     : A FUSE filesystem that supports reading/writing from MTP devices
-Name            : telegram-tg
-Description     : terminal telegram client that really works
-Name            : tuir
-Description     : Browse Reddit from your terminal
-Name            : webtorrent-cli
-Description     : The streaming torrent client. For the command line.
+buku-git:                    Powerful command-line bookmark manager.	https://github.com/jarun/Buku
+i3lock-fancy-git:            i3lock-color script	https://github.com/meskarune/i3lock-fancy
+kodi-addon-inputstream-adaptive-git: InputStream client for adaptive streams for Kodi 18+	https://github.com/xbmc/inputstream.adaptive
+kodi-addon-pvr-iptvsimple:   IPTV Simple PVR client addon for Kodi	https://github.com/kodi-pvr/pvr.iptvsimple
+mutt-wizard-git:             Easily auto-configure neomutt and isync/mpop with safe passwords (IMAP/POP3/SMTP)	https://github.com/lukesmithxyz/mutt-wizard
+nerd-fonts-source-code-pro:  Patched font SourceCodePro from nerd-fonts library	https://github.com/ryanoasis/nerd-fonts
+picom-tryone-git:            tryone144's picom fork with dual_kawase blur, an X compositor (fork of compton)	https://github.com/tryone144/picom/tree/feature/dual_kawase
+readability-cli:             Firefox Reader Mode in your terminal! - CLI tool for Mozilla's Readability library	https://www.npmjs.com/package/readability-cli
+rtl8814au-dkms-git:          RTL8814AU and RTL8813AU chipset driver with firmware v5.8.5.1	https://github.com/morrownr/8814au
+simple-mtpfs:                A FUSE filesystem that supports reading/writing from MTP devices	https://github.com/phatina/simple-mtpfs/
+telegram-tg:                 terminal telegram client that really works	https://github.com/paul-nameless/tg
+tuir:                        Browse Reddit from your terminal	https://gitlab.com/ajak/tuir/
+webtorrent-cli:              The streaming torrent client. For the command line.	https://webtorrent.io
