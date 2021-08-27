@@ -5,6 +5,9 @@ APTL
 
 Arch Linux packages tracking list generator.
 
+![aptl](https://github.com/pegromdev/aptl/blob/master/examples/aptl.png "aptl-hook")
+
+
 This [pacman](https://wiki.archlinux.org/title/Pacman) hook generates a few lists of your system Installed pakages
 but also keep track of the ones you remove plus keeps an eye in your system orphans pakages to.Aptl provides an automatic way to keep these files safe for easy pakages restoring proposes.
 
@@ -15,8 +18,6 @@ One more neat addition is the notification of orphans pakages if they are availa
 Inspired by [pug](https://aur.archlinux.org/packages/pug/) this hook lets you decide where to keep your lists and to back them up as you please. 
 Suggestion, improvements and more are Welcome!.
 
-
-![aptl](https://github.com/pegromdev/aptl/blob/master/examples/aptl.png "aptl-hook")
 
 
 # Installation
