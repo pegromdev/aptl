@@ -13,13 +13,14 @@ also it stores a list of every pakage you ever remove in case you one day need t
 One more neat addition is the notification of orphans pakages if they are available to be remove with options to clean them or add them to a white list if u ever need to.
 
 Examples:
-	-	hostname.pacman-list.txt	[link]	For reviewing official Arch pakages on your system since pakages Descitptions are available.
-	-	hostname.pacman-list.pkg	[link]	To easy restore official Arch pakages with `pacman -S - < xps.pacman-list.pkg`.
-	-	hostname.aur-list.txt			[link]	For reviewing AUR pakages on your system since pakages Descitptions are available.
-	-	hostname.aur-list.pkg			[link]	To easy restore AUR pakages with `paru -S - < xps.aur-list.pkg`.
-	-	hostname.uneeded.pkg			[link]	orphans are store here until delition or whitelisting.
-	-	hostname.whitelist.txt		[link]	if for some reason you need an orphan to stay in your system here it will be.		*( not yet implemented! )*
-	-	hostname.removed.txt			[link]	For way to time travel in case you ever need to remember an erased one 					*( not yet implemented! )*
+
+	*	hostname.pacman-list.txt	[link]	For reviewing official Arch pakages on your system since pakages Descitptions are available.
+	*	hostname.pacman-list.pkg	[link]	To easy restore official Arch pakages with `pacman -S - < xps.pacman-list.pkg`.
+	*	hostname.aur-list.txt			[link]	For reviewing AUR pakages on your system since pakages Descitptions are available.
+	*	hostname.aur-list.pkg			[link]	To easy restore AUR pakages with `paru -S - < xps.aur-list.pkg`.
+	*	hostname.uneeded.pkg			[link]	orphans are store here until delition or whitelisting.
+	*	hostname.whitelist.txt		[link]	if for some reason you need an orphan to stay in your system here it will be.		*( not yet implemented! )*
+	*	hostname.removed.txt			[link]	For way to time travel in case you ever need to remember an erased one 					*( not yet implemented! )*
 
 Suggestion, improvements and more are Welcome!.
 
